@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+header {
+    margin-left: 80px;
+    width: 90%;
+    height: 70%;
+
+    color: #fff;
+    background-color: #101010;
+
+    box-shadow: 0px 5px 20px #000;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li a {
+    color: #fff;
+
+    display: block;
+
+    text-decoration: none;
+
+    padding: 10px 20px 10px 20px;
+
+    margin-left: 10px;
+
+    font-size: 20px;
+}
+
+.menu li a:hover {
+    color: #fff;
+
+    display: block;
+
+    text-decoration: none;
+
+    margin-left: 10px;
+
+    background-color: #333;
+
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+
+h2 {
+    color:#fff;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #fff;
+}
+.container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0px 20px 0px 20px;
+
+    display: grid;    /*Eu preciso informar como eu vou querer o meu display grid, quantas colunas e quantas linhas*/
+
+   
+
+    grid-template-areas: 
+    "sidenav sobre sobre sobre"
+    "produtos produtos produtos produtos"
+    "item item item item"
+    "item item item item"
+    "footer footer footer footer";
+
+    grid-gap: 20px; 
+}
+
+
+img {
+    width: 100%;
+
+    border-radius: 20px;
+}
+
+.sidenav {
+    max-width: 300px;
+    min-width: 250;
+    height: 300px;
+    width: 300px;
+    margin-top: 10px;
+   
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: sidenav;
+    grid-row: sidenav;
+}
+
+
+.item {
+    max-width: 300px;
+    min-width: 250px;
+    height: 300px;
+
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: "item";
+}
+
+.sobre {
+    grid-area: sobre;
+}
+
+.produtos {
+    grid-area: produtos;
+}
+
+.produtos {
+    grid-area: produtos;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+.footer {
+    width: auto;
+    height: 100px;
+
+    background-color: #333;
+    border-radius: 20px;
+    grid-area: "footer";
+    grid-column: footer;
+}
+
+h3 {
+margin-left: 20px;
+margin-top: 40px;
+color: #fff;
+}
+
+.item h3 {
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.item p {
+    padding: 8px;
+}
+
+
+@media (max-width: 1023px) {
+    .container {
+        grid-template-areas: 
+        "sidenav produtos produtos"
+        "sidenav item item"
+        "sobre item item"
+        "sobre item item"
+        "sobre item item"
+        "footer footer footer";
+    }
+
+    .produtos {
+        margin-left: 200px;
+    }
+    
+    }
+
+
+
+
+@media (max-width: 640px) {
+    header {
+        width: 48%; /* Define a largura do cabeçalho como 50% */
+        margin-left: 10px;
+    }
+
+    .container {
+        grid-template-areas: 
+        "sidenav produtos item"
+        "sidenav produtos item"
+        "sobre item item"
+        "footer footer footer";
+    }
+
+    .produtos {
+        margin-left: 0px;
+    }
+
+}
+
